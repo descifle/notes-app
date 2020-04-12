@@ -1,5 +1,6 @@
 'use strict'
 
+const saveElement = document.querySelector('#save-note')
 const removeElement = document.querySelector('#remove-note')
 const titleElement = document.querySelector('#note-title')
 const bodyElement = document.querySelector('#note-body')
@@ -35,6 +36,14 @@ removeElement.addEventListener('click', () => {
     removeNote(noteId)
     saveNotes(notes)
     location.assign('index.html')
+})
+
+saveElement.addEventListener('click', () => {
+    document.querySelector('.container_clear').innerHTML = ''
+    document.querySelector('.loading-container').classList.toggle('invisible')
+    setTimeout(() => {
+        location.assign('index.html')
+    }, 800)
 })
 
 window.addEventListener('storage', (e) => {

@@ -21,10 +21,15 @@
             <span id="date"></span>
         </div>
     </div>
-    <div class="container">
+    <div class="container container_clear">
         <input id="note-title" class="title-input" placeholder="Note title">
     <textarea id="note-body" class="body-input" placeholder="Enter some text."></textarea>
     <button id="remove-note" class="button button--secondary" >Remove note</button>
+    <button id="save-note" class="button save-button" >Save note</button>
+    </div>
+    <div class="loading-container invisible">
+        <div class="loading"></div>
+        <div id="loading-text">loading</div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
     <script src="scripts/notes-functions.js"></script>
