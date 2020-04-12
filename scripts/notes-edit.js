@@ -35,7 +35,12 @@ removeElement.addEventListener('click', () => {
     console.log(noteId)
     removeNote(noteId)
     saveNotes(notes)
-    location.assign('index.html')
+    document.querySelector('.container_clear').innerHTML = ''
+    document.querySelector('.loading-container').classList.toggle('invisible')
+    document.querySelector('#loading-text').textContent = "Removing"
+    setTimeout(() => {
+        location.assign('index.html')
+    }, 400)
 })
 
 saveElement.addEventListener('click', () => {
